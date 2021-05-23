@@ -1,0 +1,5 @@
+classes= 1
+train  = data/train-obj.txt
+valid  = data/valid-obj.txt
+names = data/obj.names
+backup = ../shared/weights

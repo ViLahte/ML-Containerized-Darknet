@@ -1,0 +1,14 @@
+version: "2.3"  # the only version where 'runtime' option is supported
+
+services:
+  training_container:
+    build: .
+    container_name: darknet
+    runtime: nvidia
+    ports:
+      - 8888:8888
+    volumes:
+      - ./container/:/container/shared/
+    environment:
+      - TZ=Europe/Helsinki
+      - JUPYTER_TOKEN
