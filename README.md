@@ -1,5 +1,5 @@
 # Object detection with darknet YOLOv4
-This repository contains:
+## Description
 - A containerized darknet framework with CUDA support. AlexeyAB's fork of darknet is used.
 - Instructions for training and inference with YOLOv4 object recognition network.
 - Instructions for configuring YOLOv4 for training on custom datasets *WIP*.
