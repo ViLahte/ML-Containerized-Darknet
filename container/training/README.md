@@ -1,6 +1,9 @@
 # Notes for running and configuring darknet
 - The full documentation for configuring YOLO can be found [here](https://github.com/AlexeyAB/darknet#how-to-train-to-detect-your-custom-objects).
-- Pre-trained weights for YOLOv4 (COCO, 80 labels) can be found from [here](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137).
+- Pre-trained weights for YOLOv4 (COCO, 80 classes) can be found from [here](https://github.com/AlexeyAB/darknet/releases/download/darknet_yolo_v3_optimal/yolov4.conv.137).
+- The weights for example network which detects dragon heads (1 class) can be found from [here](https://drive.google.com/drive/folders/1-_-UEogMCKSbjYAfzK1_F9Z7aDZLglhJ?usp=sharing).
+
+
 ## Descriptions of files
 - `cfg/yolov4-obj.cfg` - network configuration.
 - `data/obj.names` - class names.
