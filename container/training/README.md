@@ -42,19 +42,14 @@ cp -r ../shared/training/cfg/yolov4-obj.cfg ./cfg/ # Network configuration
 
 
 
-## Training examples
+## Training
 
-Begin training with pre-trained weights, measure mAP:
-```bash
-./darknet detector train data/obj.data cfg/yolov4-obj.cfg yolov4.conv.137 -map -dont_show
-```
-
-Continue training with the latest weights:
+Begin training with the pre-trained weights, measure mAP. Checkpoints are created every 100 epochs:
 ```bash
 ./darknet detector train data/obj.data cfg/yolov4-obj.cfg ../shared/weights/210521_dragon.weights -map -dont_show
 ```
 
-## Object detection examples
+## Object detection
 Detect objects and output classes and probabilities:
 ```bash
 ./darknet detector test data/obj.data cfg/yolov4-obj.cfg ../shared/weights/210521_dragon.weights ../shared/training/data/obj/1c2d9660bdc7a6df0ffcf8b692357fa5.png -thresh 0.1 -dont_show
