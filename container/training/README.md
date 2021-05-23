@@ -25,7 +25,7 @@
 - Assumptions:
   - The commands are to be ran in the container.
   - `container`-folder is mounted as `container/shared` in the container.
-  - The weights-file `container/shared/weights/210521_dragon.weights` exists.
+  - The weights-file `container/weights/210521_dragon.weights` exists.
 
 
 Move to the darknet project folder
