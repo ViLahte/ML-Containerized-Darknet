@@ -28,13 +28,13 @@
   - The weights-file `container/weights/210521_dragon.weights` exists.
 
 
+
+## Preparations
 Move to the darknet project folder
 ```
 cd darknet
 ```
-## Copy the configuration (the `obj.data`-file contains hardcoded paths)
-
-
+Copy the dataset and network configurations (the `obj.data`-file contains hardcoded paths)
 ```bash
 cp -r ../shared/training/data .                    # Training dataset configuration
 cp -r ../shared/training/cfg/yolov4-obj.cfg ./cfg/ # Network configuration
