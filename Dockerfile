@@ -13,9 +13,9 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists
 
 # Compile with cuda support
-ARG cuda=1
+ARG use_cuda=1
 # Compile with tensor core support
-ARG cuda_tc=0
+ARG use_cuda_tc=0
 # Build shared library libdarknet.so for python bindings
 ARG libso=1
 
@@ -29,9 +29,9 @@ RUN sed -i -e "s!OPENMP=0!OPENMP=1!g" Makefile && \
     sed -i -e "s!OPENCV=0!OPENCV=1!g" Makefile && \
     sed -i -e "s!AVX=0!AVX=1!g" Makefile && \
     sed -i -e "s!LIBSO=0!LIBSO=${libso}!g" Makefile && \
-    sed -i -e "s!GPU=0!GPU=${cuda}!g" Makefile && \
-    sed -i -e "s!CUDNN=0!CUDNN=${cuda}!g" Makefile && \
-    sed -i -e "s!CUDNN_HALF=0!CUDNN_HALF=${cuda_tc}!g" Makefile && \
+    sed -i -e "s!GPU=0!GPU=${use_cuda}!g" Makefile && \
+    sed -i -e "s!CUDNN=0!CUDNN=${use_cuda}!g" Makefile && \
+    sed -i -e "s!CUDNN_HALF=0!CUDNN_HALF=${use_cuda_tc}!g" Makefile && \
     make
 
 # CMD ["nvidia-smi"]
